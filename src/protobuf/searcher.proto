@@ -13,9 +13,8 @@ service Searcher {
 message SearchAllRequest {
   string query = 1;
 
-	int32 skip = 2;
-	int32 limit = 3;
-
+  int32 skip = 2;
+  int32 limit = 3;
 }
 
 message SearchAllResponse {
@@ -45,22 +44,20 @@ message FilteredSearchResponse {
 message SearchAuthorRequest {
   string query = 1;
 
-	int32 skip = 2;
-	int32 limit = 3;
+  int32 skip = 2;
+  int32 limit = 3;
 }
 
 message SearchBookRequest {
   string query = 1;
 
-
-	int32 skip = 2;
-	int32 limit = 3;
+  int32 skip = 2;
+  int32 limit = 3;
 }
 
 message SearchBookSeriesRequest {
   string query = 1;
 
-
-	int32 skip = 2;
-	int32 limit = 3;
+  int32 skip = 2;
+  int32 limit = 3;
 }
