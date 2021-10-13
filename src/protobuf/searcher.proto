@@ -10,7 +10,13 @@ service Searcher {
       returns (FilteredSearchResponse);
 }
 
-message SearchAllRequest { string query = 1; }
+message SearchAllRequest {
+  string query = 1;
+
+	int32 skip = 2;
+	int32 limit = 3;
+
+}
 
 message SearchAllResponse {
   enum SearchResultType {
@@ -21,7 +27,7 @@ message SearchAllResponse {
   }
 
   message SearchResult {
-    string contentId = 1;
+    string id = 1;
     SearchResultType type = 2;
   }
 
@@ -29,13 +35,32 @@ message SearchAllResponse {
 }
 
 message FilteredSearchResponse {
-  message SearchResult { string contentId = 1; }
+  message SearchResult {
+    string id = 1;
+  }
 
   repeated SearchResult results = 1;
 }
 
-message SearchAuthorRequest { string query = 1; }
+message SearchAuthorRequest {
+  string query = 1;
 
-message SearchBookRequest { string query = 1; }
+	int32 skip = 2;
+	int32 limit = 3;
+}
 
-message SearchBookSeriesRequest { string query = 1; }
+message SearchBookRequest {
+  string query = 1;
+
+
+	int32 skip = 2;
+	int32 limit = 3;
+}
+
+message SearchBookSeriesRequest {
+  string query = 1;
+
+
+	int32 skip = 2;
+	int32 limit = 3;
+}
